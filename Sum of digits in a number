@@ -1,1 +1,25 @@
 
+import java.util.Scanner;
+
+public class Exercise {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Provide a number: ");
+        int number = scanner.nextInt();
+        System.out.println("Sum of digits:" + Sum(number));
+    }
+
+    public static int Sum(int number) {
+
+        int result = 0;
+        int[] numbers=new int[String.valueOf(number).length()];
+                for (int i = 0; i < numbers.length; i++) {
+                   numbers[i]= number %10;
+                   number /=10;
+                    result += numbers[i];
+
+        }
+        return result;
+    }
+
+}
